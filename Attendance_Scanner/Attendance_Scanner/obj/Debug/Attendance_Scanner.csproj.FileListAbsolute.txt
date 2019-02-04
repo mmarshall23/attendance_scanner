@@ -1,0 +1,15 @@
+C:\Users\40340711\Documents\GitHub\attendance_scanner\Attendance_Scanner\Attendance_Scanner\bin\Debug\Attendance_Scanner.exe.config
+C:\Users\40340711\Documents\GitHub\attendance_scanner\Attendance_Scanner\Attendance_Scanner\bin\Debug\Attendance_Scanner.exe
+C:\Users\40340711\Documents\GitHub\attendance_scanner\Attendance_Scanner\Attendance_Scanner\bin\Debug\Attendance_Scanner.pdb
+C:\Users\40340711\Documents\GitHub\attendance_scanner\Attendance_Scanner\Attendance_Scanner\obj\Debug\Attendance_Scanner.csprojAssemblyReference.cache
+C:\Users\40340711\Documents\GitHub\attendance_scanner\Attendance_Scanner\Attendance_Scanner\obj\Debug\MainWindow.g.cs
+C:\Users\40340711\Documents\GitHub\attendance_scanner\Attendance_Scanner\Attendance_Scanner\obj\Debug\App.g.cs
+C:\Users\40340711\Documents\GitHub\attendance_scanner\Attendance_Scanner\Attendance_Scanner\obj\Debug\Attendance_Scanner_MarkupCompile.cache
+C:\Users\40340711\Documents\GitHub\attendance_scanner\Attendance_Scanner\Attendance_Scanner\obj\Debug\Attendance_Scanner_MarkupCompile.lref
+C:\Users\40340711\Documents\GitHub\attendance_scanner\Attendance_Scanner\Attendance_Scanner\obj\Debug\MainWindow.baml
+C:\Users\40340711\Documents\GitHub\attendance_scanner\Attendance_Scanner\Attendance_Scanner\obj\Debug\Attendance_Scanner.g.resources
+C:\Users\40340711\Documents\GitHub\attendance_scanner\Attendance_Scanner\Attendance_Scanner\obj\Debug\Attendance_Scanner.Properties.Resources.resources
+C:\Users\40340711\Documents\GitHub\attendance_scanner\Attendance_Scanner\Attendance_Scanner\obj\Debug\Attendance_Scanner.csproj.GenerateResource.cache
+C:\Users\40340711\Documents\GitHub\attendance_scanner\Attendance_Scanner\Attendance_Scanner\obj\Debug\Attendance_Scanner.csproj.CoreCompileInputs.cache
+C:\Users\40340711\Documents\GitHub\attendance_scanner\Attendance_Scanner\Attendance_Scanner\obj\Debug\Attendance_Scanner.exe
+C:\Users\40340711\Documents\GitHub\attendance_scanner\Attendance_Scanner\Attendance_Scanner\obj\Debug\Attendance_Scanner.pdb
