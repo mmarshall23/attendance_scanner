@@ -23,12 +23,14 @@ namespace Attendance_Scanner
         bool isConnected = false;
         String[] ports;
         SerialPort port;
+        List<Student> Students { get; set; }
 
         public MainWindow()
         {
             InitializeComponent();
             getAvailableComPorts();
             RefreshPorts();
+            Students = new List<Student>();
         }
 
         void CheckForData()
@@ -107,7 +109,53 @@ namespace Attendance_Scanner
                     string data = port.ReadLine();
                     if (data != "")
                     {
-                        Application.Current.Dispatcher.Invoke(new Action(() => { lstUID.Items.Add(data); }));
+                        if(Students.Count == 0)
+                        {
+                            Application.Current.Dispatcher.Invoke(new Action(() => { lstUID.Items.Add(data); }));
+                            Students.Add(new Student(0, data));
+                        }
+                        else
+                        {
+                            bool sameID = false;
+
+
+
+                            foreach (var student in Students)
+                            {
+                                Console.WriteLine("isdie loop");
+                                if (student.UID == data)
+                                {
+                                    Console.WriteLine("same id");
+                                    
+                                    sameID = true;
+                                    break;
+                                }
+                            }
+
+                            if(!sameID)
+                            {
+                                Application.Current.Dispatcher.Invoke(new Action(() => { lstUID.Items.Add(data); }));
+                                Students.Add(new Student(0, data));
+                                Console.WriteLine("new id");
+                            }
+                            
+
+                        }
+
+                        
+
+                        //for (int i = 0; i < Students.Count; i++)
+                        //{
+                        //    if(Students[i].UID == data)
+                        //    {
+                        //        break;
+                        //    }
+                        //    else
+                        //    {
+                        //        Application.Current.Dispatcher.Invoke(new Action(() => { lstUID.Items.Add(data); }));
+                        //        Students.Add(new Student(0, data));
+                        //    }
+                        //}
                     }
                 }
             }
