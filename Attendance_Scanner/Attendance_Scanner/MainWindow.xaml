@@ -5,14 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Attendance_Scanner"
         mc:Ignorable="d"
-        Title="MainWindow" Height="277.124" Width="288.235">
+        Title="MainWindow" Height="450" Width="546.667">
     <Grid>
-        <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Attendance Scanner" VerticalAlignment="Top" FontSize="22" Width="262" FontWeight="Bold" TextAlignment="Center"/>
-        <Label Content="Username" HorizontalAlignment="Left" Margin="10,58,0,0" VerticalAlignment="Top"/>
-        <Label Content="Password" HorizontalAlignment="Left" Margin="10,129,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="10,89,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="10,159,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Button Content="Login" HorizontalAlignment="Left" Margin="10,197,0,0" VerticalAlignment="Top" Width="75"/>
+        <ListBox x:Name="lstUID" HorizontalAlignment="Left" Height="244" Margin="10,10,0,0" VerticalAlignment="Top" Width="473"/>
+        <ComboBox x:Name="comboPorts" HorizontalAlignment="Left" Margin="89,303,0,0" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btnConnect" Content="Connect" HorizontalAlignment="Left" Margin="229,303,0,0" VerticalAlignment="Top" Width="75" Click="BtnConnect_Click"/>
 
     </Grid>
 </Window>
