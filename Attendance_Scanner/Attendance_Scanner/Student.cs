@@ -8,11 +8,11 @@ namespace Attendance_Scanner
 {
     //private 
 
-    class Student
+    public class Student
     {
-        private int MetricNum { get; set; }
+        public int MetricNum { get; set; }
         public string UID { get; set; }
-        private DateTime Date { get; set; }
+        public DateTime Date { get; set; }
 
         public Student(int num, string id)
         {
