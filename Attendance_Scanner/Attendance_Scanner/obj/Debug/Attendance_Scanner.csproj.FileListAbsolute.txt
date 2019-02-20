@@ -30,3 +30,8 @@ C:\Users\cdwor\Documents\SourceTree Repos\attendance_scanner\Attendance_Scanner\
 C:\Users\cdwor\Documents\SourceTree Repos\attendance_scanner\Attendance_Scanner\Attendance_Scanner\obj\Debug\Attendance_Scanner.csproj.CoreCompileInputs.cache
 C:\Users\cdwor\Documents\SourceTree Repos\attendance_scanner\Attendance_Scanner\Attendance_Scanner\obj\Debug\Attendance_Scanner.exe
 C:\Users\cdwor\Documents\SourceTree Repos\attendance_scanner\Attendance_Scanner\Attendance_Scanner\obj\Debug\Attendance_Scanner.pdb
+C:\Users\cdwor\Documents\SourceTree Repos\attendance_scanner\Attendance_Scanner\Attendance_Scanner\bin\Debug\Google.Protobuf.dll
+C:\Users\cdwor\Documents\SourceTree Repos\attendance_scanner\Attendance_Scanner\Attendance_Scanner\bin\Debug\MySql.Data.dll
+C:\Users\cdwor\Documents\SourceTree Repos\attendance_scanner\Attendance_Scanner\Attendance_Scanner\bin\Debug\Google.Protobuf.xml
+C:\Users\cdwor\Documents\SourceTree Repos\attendance_scanner\Attendance_Scanner\Attendance_Scanner\bin\Debug\MySql.Data.xml
+C:\Users\cdwor\Documents\SourceTree Repos\attendance_scanner\Attendance_Scanner\Attendance_Scanner\obj\Debug\Attendance_Scanner.csproj.CopyComplete

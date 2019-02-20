@@ -17,10 +17,35 @@ namespace Attendance_Scanner
 {
     public partial class LoginWindow : Window
     {
+        //bool isConnected = false;
+        //String[] ports;
+        //Arduino Arduino { get; set; }
+
         public LoginWindow()
         {
             InitializeComponent();
+            //Arduino = new Arduino(null, this);
+            //if (getAvailableComPorts()) connectToArduino();
         }
+
+        //bool getAvailableComPorts()
+        //{
+        //    ports = Arduino.GetPorts();
+
+        //    if (ports[0] != "") return true;
+        //    else return false;
+        //}
+
+        //private void connectToArduino()
+        //{
+        //    Arduino.Connect(ports[0]);
+        //}
+
+        //private void disconnectFromArduino()
+        //{
+        //    Arduino.Disconnect();
+        //    isConnected = false;
+        //}
 
         private void BTN_Login_Click(object sender, RoutedEventArgs e)
         {

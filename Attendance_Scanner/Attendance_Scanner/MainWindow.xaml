@@ -5,11 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Attendance_Scanner"
         mc:Ignorable="d"
-        Title="MainWindow" Height="322" Width="241.667">
+        Title="MainWindow" Height="322" Width="624.667">
     <Grid>
         <ListBox x:Name="lstUID" HorizontalAlignment="Left" Height="244" Margin="10,10,0,0" VerticalAlignment="Top" Width="207"/>
         <ComboBox x:Name="comboPorts" HorizontalAlignment="Left" Margin="10,259,0,0" VerticalAlignment="Top" Width="120"/>
         <Button x:Name="btnConnect" Content="Connect" HorizontalAlignment="Left" Margin="135,259,0,0" VerticalAlignment="Top" Width="82" Click="BtnConnect_Click" Height="22"/>
+        <TextBox x:Name="txtBox" HorizontalAlignment="Left" Height="114" Margin="222,10,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="150"/>
 
     </Grid>
 </Window>

@@ -12,15 +12,18 @@ namespace Attendance_Scanner
         SerialPort port;
         List<Student> Students { get; set; }
         MainWindow MainWindow { get; set; }
+        LoginWindow LoginWindow { get; set; }
 
-        public Arduino(MainWindow mainWindow)
+        public Arduino(MainWindow mainWindow, LoginWindow loginWindow)
         {
             Students = new List<Student>();
             MainWindow = mainWindow;
+            LoginWindow = loginWindow;
         }
 
         public string[] GetPorts()
         {
+            Console.WriteLine(SerialPort.GetPortNames());
             return SerialPort.GetPortNames();
         }
 
@@ -49,8 +52,9 @@ namespace Attendance_Scanner
 
         void LogStudent(string data)
         {
+            
             Students.Add(new Student(0, data));
-            MainWindow.lstUID.Items.Add(data);
+            MainWindow.Add(data);
         }
 
         public List<Student> GetStudents()
@@ -62,8 +66,6 @@ namespace Attendance_Scanner
         {
             try
             {
-                if (port.IsOpen)
-                {
                     string data = port.ReadLine();
                     if (data != "")
                     {
@@ -90,7 +92,6 @@ namespace Attendance_Scanner
                             }
                         }
                     }
-                }
             }
             catch (Exception) { };
         }
