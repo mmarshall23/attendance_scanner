@@ -52,7 +52,6 @@ namespace Attendance_Scanner
 
         void LogStudent(string data)
         {
-            
             Students.Add(new Student(0, data));
             MainWindow.Add(data);
         }
@@ -66,32 +65,32 @@ namespace Attendance_Scanner
         {
             try
             {
-                    string data = port.ReadLine();
-                    if (data != "")
+                string data = port.ReadLine();
+                if (data != "")
+                {
+                    if (Students.Count == 0)
                     {
-                        if (Students.Count == 0)
+                        LogStudent(data);
+                    }
+                    else
+                    {
+                        bool sameID = false;
+
+                        foreach (var student in Students)
+                        {
+                            if (student.UID == data)
+                            {
+                                sameID = true;
+                                break;
+                            }
+                        }
+
+                        if (!sameID)
                         {
                             LogStudent(data);
                         }
-                        else
-                        {
-                            bool sameID = false;
-
-                            foreach (var student in Students)
-                            {
-                                if (student.UID == data)
-                                {
-                                    sameID = true;
-                                    break;
-                                }
-                            }
-
-                            if (!sameID)
-                            {
-                                LogStudent(data);
-                            }
-                        }
                     }
+                }
             }
             catch (Exception) { };
         }
