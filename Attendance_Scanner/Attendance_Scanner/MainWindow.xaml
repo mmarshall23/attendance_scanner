@@ -5,9 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Attendance_Scanner"
         mc:Ignorable="d"
-        Title="MainWindow" Height="304" Width="238.667">
+        Title="MainWindow" Height="326" Width="238.667">
     <Grid>
         <ListBox x:Name="lstUID" HorizontalAlignment="Left" Height="244" Margin="10,10,0,0" VerticalAlignment="Top" Width="207"/>
+        <Button x:Name="BTN_HTTP" Content="HTTP" HorizontalAlignment="Left" Margin="142,259,0,0" VerticalAlignment="Top" Width="75" Click="BTN_HTTP_Click"/>
 
     </Grid>
 </Window>

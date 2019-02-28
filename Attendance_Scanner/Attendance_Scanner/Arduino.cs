@@ -16,9 +16,9 @@ namespace Attendance_Scanner
         SerialPort port;
         List<Student> Students { get; set; }
 
-        private LoginWindow loginWindow;
-        private MainWindow mainWindow;
-        private ArduinoSetupWindow arduinoSetup;
+        public LoginWindow loginWindow;
+        public MainWindow mainWindow;
+        public ArduinoSetupWindow arduinoSetup;
 
         public bool LoginPhase { get; set; }
 
@@ -51,7 +51,7 @@ namespace Attendance_Scanner
             port.PortName = portName;
             port.Open();
 
-            loginWindow.ArduinoSetUp = true;
+            loginWindow.ArduinoSetup = true;
 
             StartReceive();
         }
@@ -72,8 +72,15 @@ namespace Attendance_Scanner
 
         void LogStudent(string data)
         {
-            Students.Add(new Student(0, data));
-            //MainWindow.Add(data);
+            string UID = data;
+            string matric;
+
+            matric = TableQuery(data);
+
+            mainWindow.Add(matric);
+
+            Students.Add(new Student(Convert.ToInt32(matric), UID));
+            
         }
 
         void Recieve()
@@ -85,17 +92,17 @@ namespace Attendance_Scanner
 
                 if (data != "")
                 {
-                    //inoSetup.LBL_LastRead.Content = data;
-                    Console.WriteLine(data);
+                    Application.Current.Dispatcher.Invoke(new Action(() => { arduinoSetup.LBL_LastRead.Content = data; }));
 
-                    if(LoginPhase)
+                    if (LoginPhase)
                     {
                         string result = TableQuery(data);
                         if (result == "99999999")
                         {
                             Application.Current.Dispatcher.Invoke(new Action(() => { loginWindow.Login("user", "1234"); }));
-
                         }
+
+                        LoginPhase = false;
                     }
 
                     if (Students.Count == 0)

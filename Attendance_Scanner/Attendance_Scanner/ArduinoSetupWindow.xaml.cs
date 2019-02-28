@@ -16,7 +16,7 @@ namespace Attendance_Scanner
 {
     public partial class ArduinoSetupWindow : Window
     {
-        Arduino Arduino { get; set; }
+        public Arduino Arduino { get; set; }
         bool isConnected = false;
         String[] ports;
 

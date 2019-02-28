@@ -18,13 +18,15 @@ namespace Attendance_Scanner
 {
     public partial class LoginWindow : Window
     {
-        public bool  ArduinoSetUp { get; set; }
-        
+        public bool  ArduinoSetup { get; set; }
+        public ArduinoSetupWindow arduinoSetupWindow { get; set; }
+
+
 
         public LoginWindow()
         {
             InitializeComponent();
-            ArduinoSetUp = false;
+            ArduinoSetup = false;
         }
 
         public void RunArduino()
@@ -44,13 +46,14 @@ namespace Attendance_Scanner
         {
             if (pass == "1234" && user == "user")
             {
-                if(!ArduinoSetUp)
+                if(!ArduinoSetup)
                 {
                     MessageBoxResult reuslt = MessageBox.Show("Please set up Arduino first.");
                 }
                 else
                 {
                     MainWindow mw = new MainWindow();
+                    arduinoSetupWindow.Arduino.mainWindow = mw;
                     mw.Show();
                     Close();
                 }
@@ -63,7 +66,7 @@ namespace Attendance_Scanner
 
         private void BTN_StartArduino_Click(object sender, RoutedEventArgs e)
         {
-            ArduinoSetupWindow arduinoSetupWindow = new ArduinoSetupWindow(this);
+            arduinoSetupWindow = new ArduinoSetupWindow(this);
             arduinoSetupWindow.Show();
         }
 

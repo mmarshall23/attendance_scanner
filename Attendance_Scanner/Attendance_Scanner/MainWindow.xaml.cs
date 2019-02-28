@@ -19,20 +19,23 @@ namespace Attendance_Scanner
 {
     public partial class MainWindow : Window
     {
-        
-
         public MainWindow()
         {
             InitializeComponent();
         }
 
-        
-        
         public void Add(string data)
         {
             data = data.Substring(0, 8);
 
-            //Application.Current.Dispatcher.Invoke(new Action(() => { lstUID.Items.Add(TableQuery(data)); }));
+            Application.Current.Dispatcher.Invoke(new Action(() => { lstUID.Items.Add(data); }));
+        }
+
+        private void BTN_HTTP_Click(object sender, RoutedEventArgs e)
+        {
+            HTTPRequest httpRequest = new HTTPRequest();
+
+            httpRequest.POST();
         }
     }
 }
