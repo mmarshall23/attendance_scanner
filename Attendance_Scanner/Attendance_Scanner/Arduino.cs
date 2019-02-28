@@ -4,26 +4,43 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO.Ports;
+using System.Data.SqlClient;
+using System.Windows;
 
 namespace Attendance_Scanner
 {
     public class Arduino
     {
+        SqlConnection sqlConnection;
+
         SerialPort port;
         List<Student> Students { get; set; }
-        MainWindow MainWindow { get; set; }
-        LoginWindow LoginWindow { get; set; }
 
-        public Arduino(MainWindow mainWindow, LoginWindow loginWindow)
+        private LoginWindow loginWindow;
+        private MainWindow mainWindow;
+        private ArduinoSetupWindow arduinoSetup;
+
+        public bool LoginPhase { get; set; }
+
+        public Arduino(LoginWindow login, MainWindow main, ArduinoSetupWindow setup)
         {
+            ConnectDatabase();
+            LoginPhase = false;
             Students = new List<Student>();
-            MainWindow = mainWindow;
-            LoginWindow = loginWindow;
+            loginWindow = login;
+            mainWindow = main;
+            arduinoSetup = setup;
+
+            if (mainWindow == null) LoginPhase = true;
+        }
+
+        public List<Student> GetStudents()
+        {
+            return Students;
         }
 
         public string[] GetPorts()
         {
-            Console.WriteLine(SerialPort.GetPortNames());
             return SerialPort.GetPortNames();
         }
 
@@ -33,6 +50,9 @@ namespace Attendance_Scanner
             port.BaudRate = 9600;
             port.PortName = portName;
             port.Open();
+
+            loginWindow.ArduinoSetUp = true;
+
             StartReceive();
         }
 
@@ -53,12 +73,7 @@ namespace Attendance_Scanner
         void LogStudent(string data)
         {
             Students.Add(new Student(0, data));
-            MainWindow.Add(data);
-        }
-
-        public List<Student> GetStudents()
-        {
-            return Students;
+            //MainWindow.Add(data);
         }
 
         void Recieve()
@@ -66,8 +81,23 @@ namespace Attendance_Scanner
             try
             {
                 string data = port.ReadLine();
+                data = data.Substring(0, 8);
+
                 if (data != "")
                 {
+                    //inoSetup.LBL_LastRead.Content = data;
+                    Console.WriteLine(data);
+
+                    if(LoginPhase)
+                    {
+                        string result = TableQuery(data);
+                        if (result == "99999999")
+                        {
+                            Application.Current.Dispatcher.Invoke(new Action(() => { loginWindow.Login("user", "1234"); }));
+
+                        }
+                    }
+
                     if (Students.Count == 0)
                     {
                         LogStudent(data);
@@ -80,6 +110,7 @@ namespace Attendance_Scanner
                         {
                             if (student.UID == data)
                             {
+                               
                                 sameID = true;
                                 break;
                             }
@@ -93,6 +124,47 @@ namespace Attendance_Scanner
                 }
             }
             catch (Exception) { };
+        }
+
+        void ConnectDatabase()
+        {
+            string connectionSource = "";
+
+            try
+            {
+                connectionSource = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\cdwor\Documents\SourceTree Repos\attendance_scanner\Attendance_Scanner\Attendance_Scanner\StudentDatabase.mdf;Integrated Security=True";
+                sqlConnection = new SqlConnection(connectionSource);
+                sqlConnection.Open();
+                Console.WriteLine("Connected to Database!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        string TableQuery(string uid)
+        {
+            SqlDataReader dataReader;
+            SqlCommand cmd;
+            string sql, output = "";
+
+            sql = string.Format("SELECT MatricNum FROM Students WHERE UID='{0}'", uid);
+
+            cmd = new SqlCommand(sql, sqlConnection);
+
+            dataReader = cmd.ExecuteReader();
+
+            while (dataReader.Read())
+            {
+                output = output + dataReader.GetValue(0);
+            }
+
+            dataReader.Close();
+            cmd.Dispose();
+
+            if (output == "") return "Could not find UID!?";
+            else return output;
         }
     }
 }

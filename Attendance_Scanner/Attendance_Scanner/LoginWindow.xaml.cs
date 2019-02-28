@@ -12,46 +12,61 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Data.SqlClient;
 
 namespace Attendance_Scanner
 {
     public partial class LoginWindow : Window
     {
-        //bool isConnected = false;
-        //String[] ports;
-        //Arduino Arduino { get; set; }
+        public bool  ArduinoSetUp { get; set; }
+        
 
         public LoginWindow()
         {
             InitializeComponent();
-            //Arduino = new Arduino(null, this);
-            //if (getAvailableComPorts()) connectToArduino();
+            ArduinoSetUp = false;
         }
 
-        //bool getAvailableComPorts()
-        //{
-        //    ports = Arduino.GetPorts();
+        public void RunArduino()
+        {
+            while(true)
+            {
 
-        //    if (ports[0] != "") return true;
-        //    else return false;
-        //}
-
-        //private void connectToArduino()
-        //{
-        //    Arduino.Connect(ports[0]);
-        //}
-
-        //private void disconnectFromArduino()
-        //{
-        //    Arduino.Disconnect();
-        //    isConnected = false;
-        //}
+            }
+        }
 
         private void BTN_Login_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow mw = new MainWindow();
-            mw.Show();
-            Close();
+            Login(TXTBOX_User.Text, TXTBOX_Pass.Text);
         }
+
+        public void Login(string user, string pass)
+        {
+            if (pass == "1234" && user == "user")
+            {
+                if(!ArduinoSetUp)
+                {
+                    MessageBoxResult reuslt = MessageBox.Show("Please set up Arduino first.");
+                }
+                else
+                {
+                    MainWindow mw = new MainWindow();
+                    mw.Show();
+                    Close();
+                }
+            }
+            else
+            {
+                MessageBoxResult reuslt = MessageBox.Show("Incorrect login details!");
+            }
+        }
+
+        private void BTN_StartArduino_Click(object sender, RoutedEventArgs e)
+        {
+            ArduinoSetupWindow arduinoSetupWindow = new ArduinoSetupWindow(this);
+            arduinoSetupWindow.Show();
+        }
+
+        
     }
 }

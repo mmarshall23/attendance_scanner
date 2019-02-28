@@ -38,3 +38,5 @@ C:\Users\cdwor\Documents\SourceTree Repos\attendance_scanner\Attendance_Scanner\
 C:\Users\cdwor\Documents\SourceTree Repos\attendance_scanner\Attendance_Scanner\Attendance_Scanner\obj\Debug\Attendance_Scanner_Content.g.cs
 C:\Users\cdwor\Documents\SourceTree Repos\attendance_scanner\Attendance_Scanner\Attendance_Scanner\bin\Debug\StudentDatabase.mdf
 C:\Users\cdwor\Documents\SourceTree Repos\attendance_scanner\Attendance_Scanner\Attendance_Scanner\bin\Debug\StudentDatabase_log.ldf
+C:\Users\cdwor\Documents\SourceTree Repos\attendance_scanner\Attendance_Scanner\Attendance_Scanner\obj\Debug\ArduinoSetupWindow.g.cs
+C:\Users\cdwor\Documents\SourceTree Repos\attendance_scanner\Attendance_Scanner\Attendance_Scanner\obj\Debug\ArduinoSetupWindow.baml
