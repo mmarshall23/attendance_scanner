@@ -14,7 +14,7 @@ namespace Attendance_Scanner
         SqlConnection sqlConnection;
 
         SerialPort port;
-        List<Student> Students { get; set; }
+        public List<Student> Students { get; set; }
 
         public LoginWindow loginWindow;
         public MainWindow mainWindow;
@@ -34,10 +34,10 @@ namespace Attendance_Scanner
             if (mainWindow == null) LoginPhase = true;
         }
 
-        public List<Student> GetStudents()
-        {
-            return Students;
-        }
+        //public List<Student> GetStudents()
+        //{
+        //    return Students;
+        //}
 
         public string[] GetPorts()
         {
@@ -77,9 +77,9 @@ namespace Attendance_Scanner
 
             matric = TableQuery(data);
 
-            mainWindow.Add(matric);
+            mainWindow.AddMatricToListBox(matric);
 
-            Students.Add(new Student(Convert.ToInt32(matric), UID));
+            Students.Add(new Student(matric));
             
         }
 
@@ -90,20 +90,20 @@ namespace Attendance_Scanner
                 string data = port.ReadLine();
                 data = data.Substring(0, 8);
 
-                if (data != "")
+                if (LoginPhase)
+                {
+                    string result = TableQuery(data);
+                    if (result == "99999999")
+                    {
+                        Application.Current.Dispatcher.Invoke(new Action(() => { loginWindow.Login("user", "1234"); }));
+                    }
+
+                    LoginPhase = false;
+                }
+
+                if (data != "" && !LoginPhase)
                 {
                     Application.Current.Dispatcher.Invoke(new Action(() => { arduinoSetup.LBL_LastRead.Content = data; }));
-
-                    if (LoginPhase)
-                    {
-                        string result = TableQuery(data);
-                        if (result == "99999999")
-                        {
-                            Application.Current.Dispatcher.Invoke(new Action(() => { loginWindow.Login("user", "1234"); }));
-                        }
-
-                        LoginPhase = false;
-                    }
 
                     if (Students.Count == 0)
                     {

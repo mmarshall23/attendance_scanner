@@ -19,12 +19,26 @@ namespace Attendance_Scanner
 {
     public partial class MainWindow : Window
     {
-        public MainWindow()
+        public bool SheetDataReady { get; set; }
+        public string Module { get; set; }
+        public string Time { get; set; }
+        public string Day { get; set; }
+        public string Week { get; set; }
+        public ArduinoSetupWindow ArduinoSetupWindow { get; set; }
+
+        public MainWindow(ArduinoSetupWindow arduino)
         {
             InitializeComponent();
+
+            ArduinoSetupWindow = arduino;
+            SheetDataReady = false;
+            Module = "";
+            Time = "";
+            Day = "";
+            Week = "";
         }
 
-        public void Add(string data)
+        public void AddMatricToListBox(string data)
         {
             data = data.Substring(0, 8);
 
@@ -33,9 +47,22 @@ namespace Attendance_Scanner
 
         private void BTN_HTTP_Click(object sender, RoutedEventArgs e)
         {
-            HTTPRequest httpRequest = new HTTPRequest();
+            if(SheetDataReady)
+            {
+                foreach (var student in ArduinoSetupWindow.Arduino.Students)
+                {
+                    HTTPRequest httpRequest = new HTTPRequest(Module, Time, student.MatricNum, Day, Week, "1");
+                }
+            }
+        }
 
-            httpRequest.POST();
+        private void BTN_Set_Click(object sender, RoutedEventArgs e)
+        {
+            Module = TXTBOX_Module.Text;
+            Time = COMBOX_Time.Text;
+            Day = COMBOX_Time.Text;
+            Week = COMBOX_Week.Text;
+            SheetDataReady = true;
         }
     }
 }

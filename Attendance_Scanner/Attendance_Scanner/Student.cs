@@ -6,19 +6,15 @@ using System.Threading.Tasks;
 
 namespace Attendance_Scanner
 {
-    //private 
-
     public class Student
     {
-        public int MetricNum { get; set; }
+        public string MatricNum { get; set; }
         public string UID { get; set; }
         public DateTime Date { get; set; }
 
-        public Student(int num, string id)
+        public Student(string num)
         {
-            MetricNum = num;
-            UID = id;
-            Date = DateTime.Now;
+            MatricNum = num;
         }
     }
 }

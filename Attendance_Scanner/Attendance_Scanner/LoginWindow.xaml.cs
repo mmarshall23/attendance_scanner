@@ -20,21 +20,12 @@ namespace Attendance_Scanner
     {
         public bool  ArduinoSetup { get; set; }
         public ArduinoSetupWindow arduinoSetupWindow { get; set; }
-
-
+        private bool bypass = false;
 
         public LoginWindow()
         {
             InitializeComponent();
             ArduinoSetup = false;
-        }
-
-        public void RunArduino()
-        {
-            while(true)
-            {
-
-            }
         }
 
         private void BTN_Login_Click(object sender, RoutedEventArgs e)
@@ -52,8 +43,8 @@ namespace Attendance_Scanner
                 }
                 else
                 {
-                    MainWindow mw = new MainWindow();
-                    arduinoSetupWindow.Arduino.mainWindow = mw;
+                    MainWindow mw = new MainWindow(arduinoSetupWindow);
+                    if(!bypass) arduinoSetupWindow.Arduino.mainWindow = mw;
                     mw.Show();
                     Close();
                 }
@@ -70,6 +61,11 @@ namespace Attendance_Scanner
             arduinoSetupWindow.Show();
         }
 
-        
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            ArduinoSetup = true;
+            bypass = true;
+            Login("user", "1234");
+        }
     }
 }

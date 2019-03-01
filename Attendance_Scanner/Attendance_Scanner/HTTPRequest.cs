@@ -6,44 +6,40 @@ using System.Threading.Tasks;
 using System.Net.Http;
 using System.Net;
 using System.IO;
+using System.Windows;
 
 namespace Attendance_Scanner
 {
-    class Request
+    public class Request
     {
-        string module;
-        string time;
-        string matric;
-        string day;
-        string week;
-        string present;
-
-        string request;
+        string result;
 
         public Request(string m, string t, string ma, string d, string w, string p)
         {
-            module = m;
-            time = t;
-            matric = ma;
-            day = d;
-            week = w;
-            present = p;
+            result = "https://tracker.napier.ac.uk/bjaxss.pl?secret=teamnyt2019&module="+m+"&time="+t+"&matric="+m+"&day="+d+"&week="+w+"&present="+p;
+        }
 
-            request = "https://tracker.napier.ac.uk/bjaxss.pl?secret=teamnyt2019&module="+module+"&time="+time+"&matric="+matric+"&day="+day+"&week="+week+"&present="+present;
+        public string GetResult()
+        {
+            return result;
         }
     }
 
     public class HTTPRequest
     {
-        public HTTPRequest()
+        Request request;
+
+        public HTTPRequest(string modules, string time, string matric, string day, string week, string present)
         {
-            Request request = new Request("CSI09101", "11:00", "40340711", "0", "7", "0");
+            request = new Request(modules, time, matric, day, week, present);
+
+            POST(request);
         }
 
-        public void POST()
+        public void POST(Request r)
         {
             string html = string.Empty;
-            string url = @"https://tracker.napier.ac.uk/bjaxss.pl?secret=teamnyt2019&module=CSI09101&time=11:00&matric=40340711&day=0&week=7&present=1";
+            string url = r.GetResult();
 
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
             //request.AutomaticDecompression = DecompressionMethods.GZip;
@@ -55,7 +51,8 @@ namespace Attendance_Scanner
                 html = reader.ReadToEnd();
             }
 
-            Console.WriteLine(html);
+            MessageBox.Show(html);
+            //Console.WriteLine(html);
         }
     }
 }
