@@ -21,23 +21,22 @@ namespace Attendance_Scanner
         public ArduinoSetupWindow arduinoSetup;
 
         public bool LoginPhase { get; set; }
+        public string LecturerUID { get; set; }
 
         public Arduino(LoginWindow login, MainWindow main, ArduinoSetupWindow setup)
         {
             ConnectDatabase();
+
+            //initalising variables
             LoginPhase = false;
             Students = new List<Student>();
             loginWindow = login;
             mainWindow = main;
             arduinoSetup = setup;
+            LecturerUID = "";
 
             if (mainWindow == null) LoginPhase = true;
         }
-
-        //public List<Student> GetStudents()
-        //{
-        //    return Students;
-        //}
 
         public string[] GetPorts()
         {
@@ -79,7 +78,7 @@ namespace Attendance_Scanner
 
             mainWindow.AddMatricToListBox(matric);
 
-            Students.Add(new Student(matric));
+            Students.Add(new Student(matric, UID));
             
         }
 
@@ -96,12 +95,13 @@ namespace Attendance_Scanner
                     if (result == "99999999")
                     {
                         Application.Current.Dispatcher.Invoke(new Action(() => { loginWindow.Login("user", "1234"); }));
+                        LecturerUID = data;
                     }
 
                     LoginPhase = false;
                 }
 
-                if (data != "" && !LoginPhase)
+                if (data != "" && !LoginPhase && data != LecturerUID)
                 {
                     Application.Current.Dispatcher.Invoke(new Action(() => { arduinoSetup.LBL_LastRead.Content = data; }));
 

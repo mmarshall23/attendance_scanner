@@ -12,9 +12,10 @@ namespace Attendance_Scanner
         public string UID { get; set; }
         public DateTime Date { get; set; }
 
-        public Student(string num)
+        public Student(string num, string uid)
         {
             MatricNum = num;
+            UID = uid;
         }
     }
 }
