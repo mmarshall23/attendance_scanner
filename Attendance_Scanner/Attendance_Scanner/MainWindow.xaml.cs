@@ -36,6 +36,8 @@ namespace Attendance_Scanner
             Time = "";
             Day = "";
             Week = "";
+            LBL_Status.Content = "Not Ready";
+            
         }
 
         public void AddMatricToListBox(string data)
@@ -60,9 +62,17 @@ namespace Attendance_Scanner
         {
             Module = TXTBOX_Module.Text;
             Time = COMBOX_Time.Text;
-            Day = COMBOX_Time.Text;
+            Day = (COMBOX_Time.SelectedIndex - 1).ToString();
             Week = COMBOX_Week.Text;
             SheetDataReady = true;
+            LBL_Status.Content = "Ready";
+            BTN_Set.Visibility = Visibility.Collapsed;
+            LBL_Reader.Content = "Reader On";
+        }
+
+        public void ValidateSheet(string module, string time, string day, string week)
+        {
+            //validate each input field independently 
         }
     }
 }

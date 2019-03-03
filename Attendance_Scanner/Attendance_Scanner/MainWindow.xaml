@@ -46,6 +46,7 @@
         <Label Content="Status:" HorizontalAlignment="Left" Margin="228,203,0,0" VerticalAlignment="Top"/>
         <Button x:Name="BTN_Set" Content="Set" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="228,162,0,0" Click="BTN_Set_Click"/>
         <Label x:Name="LBL_Status" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="278,203,0,0"/>
+        <Label x:Name="LBL_Reader" Content="Reader off" HorizontalAlignment="Left" Margin="133,13,0,0" VerticalAlignment="Top" FontSize="10" Background="White"/>
 
     </Grid>
 </Window>
