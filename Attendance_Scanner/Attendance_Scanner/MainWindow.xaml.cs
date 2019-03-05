@@ -66,8 +66,17 @@ namespace Attendance_Scanner
             Week = COMBOX_Week.Text;
             SheetDataReady = true;
             LBL_Status.Content = "Ready";
+            LBL_Status.Foreground = new SolidColorBrush(Colors.Green);
             BTN_Set.Visibility = Visibility.Collapsed;
             LBL_Reader.Content = "Reader On";
+            COMBOX_Time.Visibility = Visibility.Collapsed;
+            COMBOX_Week.Visibility = Visibility.Collapsed;
+            COMBOX_Day.Visibility = Visibility.Collapsed;
+            TXTBOX_Module.Visibility = Visibility.Collapsed;
+            lblmodule.Content = "Module: " + Module;
+            lblweek.Content = "Week: " + Week;
+            lblday.Content = "Day: " + Day;
+            lbltime.Content = "Time: " + Time;
         }
 
         public void ValidateSheet(string module, string time, string day, string week)
