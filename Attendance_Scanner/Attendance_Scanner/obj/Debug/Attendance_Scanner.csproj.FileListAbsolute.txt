@@ -67,3 +67,30 @@ C:\Users\rusci\Documents\GitHub\attendance_scanner\Attendance_Scanner\attendance
 C:\Users\rusci\Documents\GitHub\attendance_scanner\Attendance_Scanner\attendance_scanner\Attendance_Scanner\Attendance_Scanner\obj\Debug\Attendance_Scanner.csproj.CopyComplete
 C:\Users\rusci\Documents\GitHub\attendance_scanner\Attendance_Scanner\attendance_scanner\Attendance_Scanner\Attendance_Scanner\obj\Debug\Attendance_Scanner.exe
 C:\Users\rusci\Documents\GitHub\attendance_scanner\Attendance_Scanner\attendance_scanner\Attendance_Scanner\Attendance_Scanner\obj\Debug\Attendance_Scanner.pdb
+\\napier-mail.napier.ac.uk\students\School of Computing\User Data\40328672\My Profile\Desktop\Attendance_Scanner\Attendance_Scanner\bin\Debug\StudentDatabase.mdf
+\\napier-mail.napier.ac.uk\students\School of Computing\User Data\40328672\My Profile\Desktop\Attendance_Scanner\Attendance_Scanner\bin\Debug\StudentDatabase_log.ldf
+\\napier-mail.napier.ac.uk\students\School of Computing\User Data\40328672\My Profile\Desktop\Attendance_Scanner\Attendance_Scanner\bin\Debug\Attendance_Scanner.exe.config
+\\napier-mail.napier.ac.uk\students\School of Computing\User Data\40328672\My Profile\Desktop\Attendance_Scanner\Attendance_Scanner\bin\Debug\Attendance_Scanner.exe
+\\napier-mail.napier.ac.uk\students\School of Computing\User Data\40328672\My Profile\Desktop\Attendance_Scanner\Attendance_Scanner\bin\Debug\Attendance_Scanner.pdb
+\\napier-mail.napier.ac.uk\students\School of Computing\User Data\40328672\My Profile\Desktop\Attendance_Scanner\Attendance_Scanner\bin\Debug\Google.Protobuf.dll
+\\napier-mail.napier.ac.uk\students\School of Computing\User Data\40328672\My Profile\Desktop\Attendance_Scanner\Attendance_Scanner\bin\Debug\MySql.Data.dll
+\\napier-mail.napier.ac.uk\students\School of Computing\User Data\40328672\My Profile\Desktop\Attendance_Scanner\Attendance_Scanner\bin\Debug\Google.Protobuf.xml
+\\napier-mail.napier.ac.uk\students\School of Computing\User Data\40328672\My Profile\Desktop\Attendance_Scanner\Attendance_Scanner\bin\Debug\MySql.Data.xml
+\\napier-mail.napier.ac.uk\students\School of Computing\User Data\40328672\My Profile\Desktop\Attendance_Scanner\Attendance_Scanner\obj\Debug\Attendance_Scanner.csprojAssemblyReference.cache
+\\napier-mail.napier.ac.uk\students\School of Computing\User Data\40328672\My Profile\Desktop\Attendance_Scanner\Attendance_Scanner\obj\Debug\ArduinoSetupWindow.g.cs
+\\napier-mail.napier.ac.uk\students\School of Computing\User Data\40328672\My Profile\Desktop\Attendance_Scanner\Attendance_Scanner\obj\Debug\LoginWindow.g.cs
+\\napier-mail.napier.ac.uk\students\School of Computing\User Data\40328672\My Profile\Desktop\Attendance_Scanner\Attendance_Scanner\obj\Debug\MainWindow.g.cs
+\\napier-mail.napier.ac.uk\students\School of Computing\User Data\40328672\My Profile\Desktop\Attendance_Scanner\Attendance_Scanner\obj\Debug\App.g.cs
+\\napier-mail.napier.ac.uk\students\School of Computing\User Data\40328672\My Profile\Desktop\Attendance_Scanner\Attendance_Scanner\obj\Debug\Attendance_Scanner_Content.g.cs
+\\napier-mail.napier.ac.uk\students\School of Computing\User Data\40328672\My Profile\Desktop\Attendance_Scanner\Attendance_Scanner\obj\Debug\Attendance_Scanner_MarkupCompile.cache
+\\napier-mail.napier.ac.uk\students\School of Computing\User Data\40328672\My Profile\Desktop\Attendance_Scanner\Attendance_Scanner\obj\Debug\Attendance_Scanner_MarkupCompile.lref
+\\napier-mail.napier.ac.uk\students\School of Computing\User Data\40328672\My Profile\Desktop\Attendance_Scanner\Attendance_Scanner\obj\Debug\ArduinoSetupWindow.baml
+\\napier-mail.napier.ac.uk\students\School of Computing\User Data\40328672\My Profile\Desktop\Attendance_Scanner\Attendance_Scanner\obj\Debug\LoginWindow.baml
+\\napier-mail.napier.ac.uk\students\School of Computing\User Data\40328672\My Profile\Desktop\Attendance_Scanner\Attendance_Scanner\obj\Debug\MainWindow.baml
+\\napier-mail.napier.ac.uk\students\School of Computing\User Data\40328672\My Profile\Desktop\Attendance_Scanner\Attendance_Scanner\obj\Debug\Attendance_Scanner.g.resources
+\\napier-mail.napier.ac.uk\students\School of Computing\User Data\40328672\My Profile\Desktop\Attendance_Scanner\Attendance_Scanner\obj\Debug\Attendance_Scanner.Properties.Resources.resources
+\\napier-mail.napier.ac.uk\students\School of Computing\User Data\40328672\My Profile\Desktop\Attendance_Scanner\Attendance_Scanner\obj\Debug\Attendance_Scanner.csproj.GenerateResource.cache
+\\napier-mail.napier.ac.uk\students\School of Computing\User Data\40328672\My Profile\Desktop\Attendance_Scanner\Attendance_Scanner\obj\Debug\Attendance_Scanner.csproj.CoreCompileInputs.cache
+\\napier-mail.napier.ac.uk\students\School of Computing\User Data\40328672\My Profile\Desktop\Attendance_Scanner\Attendance_Scanner\obj\Debug\Attendance_Scanner.csproj.CopyComplete
+\\napier-mail.napier.ac.uk\students\School of Computing\User Data\40328672\My Profile\Desktop\Attendance_Scanner\Attendance_Scanner\obj\Debug\Attendance_Scanner.exe
+\\napier-mail.napier.ac.uk\students\School of Computing\User Data\40328672\My Profile\Desktop\Attendance_Scanner\Attendance_Scanner\obj\Debug\Attendance_Scanner.pdb

@@ -51,6 +51,8 @@
         <Button x:Name="BTN_Set" Content="Set" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="399,189,0,0" Click="BTN_Set_Click" RenderTransformOrigin="0.668,0.242"/>
         <Label x:Name="LBL_Status" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="420,236,0,0" Foreground="#FFB01000" FontWeight="Bold"/>
         <Label x:Name="LBL_Reader" Content="Reader off" HorizontalAlignment="Left" Margin="306,13,0,0" VerticalAlignment="Top" FontSize="10" Background="White" RenderTransformOrigin="2.243,0.484"/>
+        <Label Content="Student Scanned: " HorizontalAlignment="Left" Margin="132,18,0,0" VerticalAlignment="Top" RenderTransformOrigin="-2.474,0.316"/>
+        <Label x:Name="lblstudendscanned" Content="0" HorizontalAlignment="Left" Margin="231,18,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
 
     </Grid>
 </Window>

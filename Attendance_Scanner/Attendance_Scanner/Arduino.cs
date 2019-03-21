@@ -108,6 +108,7 @@ namespace Attendance_Scanner
                     if (Students.Count == 0)
                     {
                         LogStudent(data);
+                        Console.WriteLine(data);
                     }
                     else
                     {

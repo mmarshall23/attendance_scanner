@@ -52,7 +52,6 @@ namespace Attendance_Scanner
             }
 
             MessageBox.Show(html);
-            //Console.WriteLine(html);
         }
     }
 }
