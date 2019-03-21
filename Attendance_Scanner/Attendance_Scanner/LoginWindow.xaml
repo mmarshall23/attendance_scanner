@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Attendance_Scanner"
         mc:Ignorable="d"
-        Title="Login Window" Height="434.442" Width="398.02" WindowStartupLocation="CenterScreen">
+        Title="Login Window" Height="504.942" Width="396.52" WindowStartupLocation="CenterScreen">
     <Grid Margin="0">
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -13,15 +13,16 @@
                 <GradientStop Color="#99262626"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <TextBlock Margin="-10,10,10,0" TextWrapping="Wrap" Text="Attendance Scanner" VerticalAlignment="Top" FontSize="36" TextAlignment="Center" FontFamily="Trebuchet MS" FontWeight="Bold" Height="45"/>
-        <Label Content="Lecturer Number" Margin="123,77,114,0" VerticalAlignment="Top" Height="30" FontSize="18" RenderTransformOrigin="1.262,0.911"/>
-        <Label Content="Password" Margin="150,149,146,0" VerticalAlignment="Top" Height="39" FontSize="18"/>
-        <TextBox x:Name="TXTBOX_User" HorizontalAlignment="Left" Height="32" Margin="103,112,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="184" FontSize="16"/>
-        <TextBox x:Name="TXTBOX_Pass" HorizontalAlignment="Left" Height="32" Margin="103,188,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="184" FontSize="16"/>
-        <Button x:Name="BTN_Login" Content="Login" HorizontalAlignment="Left" Margin="123,248,0,0" VerticalAlignment="Top" Width="145" Click="BTN_Login_Click" RenderTransformOrigin="1.366,0.85" Background="#FFC50E34" Height="40" BorderBrush="Black" FontWeight="Bold" FontSize="18"/>
-        <Button x:Name="BTN_StartArduino" Content="Settings" HorizontalAlignment="Left" Margin="123,294,0,0" VerticalAlignment="Top" Width="145" Click="BTN_StartArduino_Click" Background="#FFBF9191" Height="28" FontSize="16"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="306,259,0,0" VerticalAlignment="Top" Width="74" Click="Button_Click" Height="33"/>
-        <Image Margin="230,347,10,10" Source="Edinburgh Napier logo rev w300px.png"/>
+        <TextBlock Margin="0,10,0,0" TextWrapping="Wrap" Text="Attendance Scanner" VerticalAlignment="Top" FontSize="36" TextAlignment="Center" FontFamily="Trebuchet MS" FontWeight="Bold" Height="45"/>
+        <Label Content="Lecturer Number" Margin="125,170,111,0" VerticalAlignment="Top" Height="30" FontSize="18" RenderTransformOrigin="1.262,0.911"/>
+        <Label Content="Password" Margin="153,242,143,0" VerticalAlignment="Top" Height="40" FontSize="18"/>
+        <TextBox x:Name="TXTBOX_User" HorizontalAlignment="Left" Height="32" Margin="105,206,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="184" FontSize="16"/>
+        <TextBox x:Name="TXTBOX_Pass" HorizontalAlignment="Left" Height="32" Margin="105,282,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="184" FontSize="16"/>
+        <Button x:Name="BTN_Login" Content="Login" HorizontalAlignment="Left" Margin="125,342,0,0" VerticalAlignment="Top" Width="146" Click="BTN_Login_Click" RenderTransformOrigin="1.366,0.85" Background="#FFC50E34" Height="40" BorderBrush="Black" FontWeight="Bold" FontSize="18"/>
+        <Button x:Name="BTN_StartArduino" Content="Settings" HorizontalAlignment="Left" Margin="125,388,0,0" VerticalAlignment="Top" Width="146" Click="BTN_StartArduino_Click" Background="#FFBF9191" Height="28" FontSize="16"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="302,356,0,0" VerticalAlignment="Top" Width="74" Click="Button_Click" Height="34"/>
+        <Image Margin="237,416,0,0" Source="Edinburgh Napier logo rev w300px.png"/>
+        <Image Margin="146,30,100,292" Source="thumbnail.png" Stretch="Fill"/>
 
     </Grid>
 </Window>
