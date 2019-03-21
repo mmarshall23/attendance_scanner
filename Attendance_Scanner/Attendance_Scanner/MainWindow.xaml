@@ -5,31 +5,37 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Attendance_Scanner"
         mc:Ignorable="d"
-        Title="MainWindow" Height="341.696" Width="519.736">
-    <Grid Background="#FFDADADA" Margin="0,0,2,0">
+        Title="MainWindow" Height="688.022" Width="744.254" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid Margin="0">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#CC7E021C" Offset="0.993"/>
+                <GradientStop Color="#99262626"/>
+            </LinearGradientBrush>
+        </Grid.Background>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <GroupBox Header="Attendance Sheet" HorizontalAlignment="Left" Height="209" Margin="375,13,0,0" VerticalAlignment="Top" Width="123" BorderBrush="Black" FontWeight="Bold"/>
+        <GroupBox Header="Class Information" HorizontalAlignment="Left" Height="292" Margin="524,202,0,0" VerticalAlignment="Top" Width="184" BorderBrush="Red" FontWeight="Bold" FontSize="16" TextOptions.TextFormattingMode="Display"/>
 
-        <ListBox x:Name="lstUID" HorizontalAlignment="Left" Height="259" Margin="10,41,0,0" VerticalAlignment="Top" Width="351"/>
-        <Button x:Name="BTN_HTTP" Content="Finish" HorizontalAlignment="Left" Margin="423,280,0,0" VerticalAlignment="Top" Width="75" Click="BTN_HTTP_Click"/>
-        <Label Content="Students" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-        <TextBox x:Name="TXTBOX_Module" HorizontalAlignment="Left" Height="23" Margin="388,65,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="93"/>
-        <ComboBox x:Name="COMBOX_Time" HorizontalAlignment="Left" Margin="432,99,0,0" VerticalAlignment="Top" Width="49">
+        <ListBox x:Name="lstUID" HorizontalAlignment="Left" Height="438" Margin="25,191,0,0" VerticalAlignment="Top" Width="474"/>
+        <Button x:Name="BTN_HTTP" Content="Send to Tracker" HorizontalAlignment="Left" Margin="524,582,0,0" VerticalAlignment="Top" Width="182" Click="BTN_HTTP_Click" FontSize="18" FontWeight="Bold" Height="44" BorderBrush="#FF534949" Background="#FFC50E34"/>
+        <Label Content="Students" HorizontalAlignment="Left" Margin="25,162,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14"/>
+        <TextBox x:Name="TXTBOX_Module" HorizontalAlignment="Left" Height="32" Margin="542,274,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="140"/>
+        <ComboBox x:Name="COMBOX_Time" HorizontalAlignment="Left" Margin="610,322,0,0" VerticalAlignment="Top" Width="72" Height="30">
             <ComboBoxItem Content="09:00"/>
             <ComboBoxItem Content="11:00"/>
             <ComboBoxItem Content="13:00"/>
             <ComboBoxItem Content="15:00"/>
         </ComboBox>
-        <ComboBox x:Name="COMBOX_Day" HorizontalAlignment="Left" Margin="432,126,0,0" VerticalAlignment="Top" Width="49">
+        <ComboBox x:Name="COMBOX_Day" HorizontalAlignment="Left" Margin="610,360,0,0" VerticalAlignment="Top" Width="72" Height="30">
             <ComboBoxItem Content="Mon"/>
             <ComboBoxItem Content="Tue"/>
             <ComboBoxItem Content="Wed"/>
             <ComboBoxItem Content="Thu"/>
             <ComboBoxItem Content="Fri"/>
         </ComboBox>
-        <ComboBox x:Name="COMBOX_Week" HorizontalAlignment="Left" Margin="432,153,0,0" VerticalAlignment="Top" Width="49">
+        <ComboBox x:Name="COMBOX_Week" HorizontalAlignment="Left" Margin="610,398,0,0" VerticalAlignment="Top" Width="72" Height="30">
             <ComboBoxItem Content="1"/>
             <ComboBoxItem Content="2"/>
             <ComboBoxItem Content="3"/>
@@ -43,16 +49,17 @@
             <ComboBoxItem Content="11"/>
             <ComboBoxItem Content="12"/>
         </ComboBox>
-        <Label x:Name="lblmodule" Content="Module" HorizontalAlignment="Left" Margin="388,39,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="lbltime" Content="Time" HorizontalAlignment="Left" Margin="389,95,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="lblday" Content="Day" HorizontalAlignment="Left" Margin="389,122,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.392,1.392"/>
-        <Label x:Name="lblweek" Content="Week" HorizontalAlignment="Left" Margin="390,149,0,0" VerticalAlignment="Top"/>
-        <Label Content="Status:" HorizontalAlignment="Left" Margin="375,236,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.135,3.126"/>
-        <Button x:Name="BTN_Set" Content="Set" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="399,189,0,0" Click="BTN_Set_Click" RenderTransformOrigin="0.668,0.242"/>
-        <Label x:Name="LBL_Status" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="420,236,0,0" Foreground="#FFB01000" FontWeight="Bold"/>
-        <Label x:Name="LBL_Reader" Content="Reader off" HorizontalAlignment="Left" Margin="306,13,0,0" VerticalAlignment="Top" FontSize="10" Background="White" RenderTransformOrigin="2.243,0.484"/>
-        <Label Content="Student Scanned: " HorizontalAlignment="Left" Margin="132,18,0,0" VerticalAlignment="Top" RenderTransformOrigin="-2.474,0.316"/>
-        <Label x:Name="lblstudendscanned" Content="0" HorizontalAlignment="Left" Margin="231,18,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label x:Name="lblmodule" Content="Module" HorizontalAlignment="Left" Margin="542,238,0,0" VerticalAlignment="Top" Width="76" Height="36" FontSize="16"/>
+        <Label x:Name="lbltime" Content="Time" HorizontalAlignment="Left" Margin="544,316,0,0" VerticalAlignment="Top" Width="54" Height="36" FontSize="16"/>
+        <Label x:Name="lblday" Content="Day" HorizontalAlignment="Left" Margin="544,354,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.392,1.392" Width="46" Height="36" FontSize="16"/>
+        <Label x:Name="lblweek" Content="Week" HorizontalAlignment="Left" Margin="546,392,0,0" VerticalAlignment="Top" Width="58" Height="36" FontSize="16"/>
+        <Label Content="Status:" HorizontalAlignment="Left" Margin="534,526,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.135,3.126" FontWeight="Bold" FontSize="14"/>
+        <Button x:Name="BTN_Set" Content="Set" HorizontalAlignment="Left" VerticalAlignment="Top" Width="112" Margin="560,448,0,0" Click="BTN_Set_Click" RenderTransformOrigin="0.668,0.242" Background="#C93E3C3C" Foreground="White" BorderBrush="Black" Height="28" FontSize="16"/>
+        <Label x:Name="LBL_Status" Content="" VerticalAlignment="Top" Margin="586,526,32,0" Foreground="#FFB01000" FontWeight="Bold" RenderTransformOrigin="3.758,0.268" Background="#7FB0A7A7" FontSize="14"/>
+        <Label Content="Attended: " HorizontalAlignment="Left" Margin="318,162,0,0" VerticalAlignment="Top" RenderTransformOrigin="-2.474,0.316" FontSize="14"/>
+        <Label x:Name="lblstudendscanned" Content="0" HorizontalAlignment="Left" Margin="384,162,0,0" VerticalAlignment="Top" FontWeight="Bold" Width="36" FontSize="14"/>
+        <Image Margin="25,-12,318,521" Source="EdNapUni_red.png"/>
+        <Label Content="Attendance &#xD;&#xA;&#x9;Scanner" HorizontalAlignment="Left" Margin="412,59,0,0" VerticalAlignment="Top" FontFamily="Trebuchet MS" FontWeight="SemiBold" Height="98" Width="316" FontSize="36" FontStyle="Italic" FontStretch="ExtraExpanded" TextOptions.TextHintingMode="Animated"/>
 
     </Grid>
 </Window>

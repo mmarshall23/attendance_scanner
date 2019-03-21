@@ -171,6 +171,8 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="EdNapUni_red.png" />
+    <Resource Include="Edinburgh Napier logo rev w300px.png" />
     <Content Include="StudentDatabase.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

@@ -41,7 +41,7 @@ namespace Attendance_Scanner
             scannedcounter = 0;
             LBL_Status.Content = "Not Ready";
             lblstudendscanned.Content = scannedcounter.ToString();
-            
+          
         }
 
         public void AddMatricToListBox(string data)
@@ -49,7 +49,9 @@ namespace Attendance_Scanner
             data = data.Substring(0, 8);
 
             Application.Current.Dispatcher.Invoke(new Action(() => { lstUID.Items.Add(data); }));
+           
             scannedcounter++;
+            lblstudendscanned.Content = scannedcounter.ToString();
 
         }
 
@@ -61,6 +63,10 @@ namespace Attendance_Scanner
                 {
                     HTTPRequest httpRequest = new HTTPRequest(Module, Time, student.MatricNum, Day, Week, "1");
                 }
+            }
+            else
+            {
+                MessageBox.Show("Please fill lecture information");
             }
         }
 
@@ -76,7 +82,7 @@ namespace Attendance_Scanner
                 LBL_Status.Content = "Ready";
                 LBL_Status.Foreground = new SolidColorBrush(Colors.Green);
                 BTN_Set.Content = "Edit";
-                LBL_Reader.Content = "Reader On";
+                
                 COMBOX_Time.Visibility = Visibility.Collapsed;
                 COMBOX_Week.Visibility = Visibility.Collapsed;
                 COMBOX_Day.Visibility = Visibility.Collapsed;
@@ -100,7 +106,7 @@ namespace Attendance_Scanner
                 lblweek.Content = "Week: ";
                 lblday.Content = "Day: ";
                 lbltime.Content = "Time: ";
-                LBL_Reader.Content = "Reader Off";
+              
                 SheetDataReady = false;
                 edit = false;
 
