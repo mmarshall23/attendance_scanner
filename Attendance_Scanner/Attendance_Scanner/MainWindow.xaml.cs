@@ -14,6 +14,7 @@ using System.Windows.Shapes;
 using System.IO.Ports;
 using MySql.Data.MySqlClient;
 using System.Data.SqlClient;
+using System.Drawing;
 
 namespace Attendance_Scanner
 {
@@ -88,6 +89,7 @@ namespace Attendance_Scanner
                 COMBOX_Day.Visibility = Visibility.Collapsed;
                 TXTBOX_Module.Visibility = Visibility.Collapsed;
                 lblmodule.Content = "Module: " + Module;
+              
                 lblweek.Content = "Week: " + Week;
                 lblday.Content = "Day: " + Day;
                 lbltime.Content = "Time: " + Time;

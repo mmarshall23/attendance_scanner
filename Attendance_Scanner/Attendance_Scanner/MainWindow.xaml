@@ -49,10 +49,19 @@
             <ComboBoxItem Content="11"/>
             <ComboBoxItem Content="12"/>
         </ComboBox>
-        <Label x:Name="lblmodule" Content="Module" HorizontalAlignment="Left" Margin="542,238,0,0" VerticalAlignment="Top" Width="76" Height="36" FontSize="16"/>
-        <Label x:Name="lbltime" Content="Time" HorizontalAlignment="Left" Margin="544,316,0,0" VerticalAlignment="Top" Width="54" Height="36" FontSize="16"/>
-        <Label x:Name="lblday" Content="Day" HorizontalAlignment="Left" Margin="544,354,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.392,1.392" Width="46" Height="36" FontSize="16"/>
-        <Label x:Name="lblweek" Content="Week" HorizontalAlignment="Left" Margin="546,392,0,0" VerticalAlignment="Top" Width="58" Height="36" FontSize="16"/>
+        <Label x:Name="lblmodule" Content="Module" HorizontalAlignment="Left" Margin="542,238,0,0" VerticalAlignment="Top" Width="130" Height="36" FontSize="16"/>
+        <Label x:Name="lbltime" Content="Time" HorizontalAlignment="Left" Margin="544,315,0,0" VerticalAlignment="Top" Width="99" Height="36" FontSize="16" RenderTransformOrigin="0.5,0.5">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="-0.456"/>
+                    <RotateTransform Angle="-0.517"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Label x:Name="lblday" Content="Day" HorizontalAlignment="Left" Margin="544,354,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.392,1.392" Width="100" Height="36" FontSize="16"/>
+        <Label x:Name="lblweek" Content="Week" HorizontalAlignment="Left" Margin="545,392,0,0" VerticalAlignment="Top" Width="99" Height="36" FontSize="16"/>
         <Label Content="Status:" HorizontalAlignment="Left" Margin="534,526,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.135,3.126" FontWeight="Bold" FontSize="14"/>
         <Button x:Name="BTN_Set" Content="Set" HorizontalAlignment="Left" VerticalAlignment="Top" Width="112" Margin="560,448,0,0" Click="BTN_Set_Click" RenderTransformOrigin="0.668,0.242" Background="#C93E3C3C" Foreground="White" BorderBrush="Black" Height="28" FontSize="16"/>
         <Label x:Name="LBL_Status" Content="" VerticalAlignment="Top" Margin="586,526,32,0" Foreground="#FFB01000" FontWeight="Bold" RenderTransformOrigin="3.758,0.268" Background="#7FB0A7A7" FontSize="14"/>
